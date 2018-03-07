@@ -1,0 +1,78 @@
+#header{
+	width: 100%;
+	height: 3em;
+	
+	display: flex;
+	justify-content: center;
+
+	background-color: black;
+
+	.container{
+		width: 80%;
+		display: flex;
+		justify-content:space-between;
+		h1{
+			
+			display: flex;
+			line-height: 3rem;
+			font-size:1.5rem;
+			font-weight: bold;
+			color: white;
+
+			transition-property:all;
+			transition-duration:.2s;
+			transition-timing-function:ease-in-out;
+			&:hover{
+				color:#00ff00;
+			}
+		
+		}
+		ul{
+			display: flex;
+			align-items:center;
+			li{
+				margin-left: 1em;
+				
+				display: flex;
+				
+				padding: .2em .4em;
+
+				border:2px solid #ffffff;
+				border-radius: .4em;
+
+				line-height: 1.4em;
+				font-size:1em;
+				font-weight: bold;
+				color:white;
+				
+				transition-property:all;
+				transition-duration:.2s;
+				transition-timing-function: ease-in-out;
+				&:hover{
+					box-shadow:  0px 0px 2px 2px #00ff00;
+					border-color: #00ff00;
+					color:#00ff00;
+				}
+				
+			}
+		}
+	}
+}
+
+/*
+	font-size 记得要小于 line-height 的值，否则会有意外的效果，如上面的 1em 3em
+	之前把它们设成一样的值了，导致导致字体过大跑到父级的外面去了
+
+	默认情况下，a标签是没有line-height的，因为默认內联元素，如果想要加line-height等改变宽高的样式
+	要先改变它的属性，即加float或display等
+
+	line-height 样式要加在跟文字内容所在同一个标签內，line-height font-size等都要加在一起
+	且line-height和font-size的单位要一致，如果出现上面任何一个不匹配的格式就都有可能出现奇怪的样式
+
+	在Chrome浏览器中，如果父级使用了display：flex，子级用display：inline-block的话，上边会有一点间隙
+	但子级改成display：flex间隙消失
+
+	display:flex  justify-content 作用的对象是所给此样式的子级
+
+	justify-between 如果child只有两个的话，效果就是两端分布
+*/

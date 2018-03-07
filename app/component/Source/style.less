@@ -1,0 +1,221 @@
+@media screen and (min-width:1224px) and (max-width:1640px){
+	#SourceList{
+		width: 100%;
+		// 通过设置最小高度来控制Footer置底
+		min-height: 50em;
+		margin-bottom:30px;
+
+		display: flex;
+		justify-content:center;
+		.container{
+			width: 80%;
+			display: flex;
+			flex-direction:column;
+			h3{
+				font-size: 1.8em;
+				font-weight: bold;
+				color:#808080;
+			}
+			#list-header{
+				display: flex;
+				flex-direction:row;
+				li{
+					font-size: .8rem;
+					font-weight: bold;
+
+					height: 3em;
+					line-height: 3em;
+				}
+				li:nth-child(4){
+					display: none;
+				}
+			}
+			#list-body{
+				display: flex;
+				flex-direction:column;
+				ul{
+					display:flex;
+					flex-direction:row;
+					li{
+						display: flex;
+						align-items:center;
+						height: 3em;
+						font-size: .8em;
+						border-top: 2px #808080 solid;
+
+						// 问题！没有省略号出现，还有小问题就是边界紧贴文字
+						text-overflow:ellipsis; 
+						white-space:nowrap; 
+						overflow:hidden;
+					}
+					li:nth-child(4){
+						display: none;
+					}
+					li:nth-child(3):hover, li:nth-child(5):hover{
+						cursor: pointer;
+						color:red;
+					}
+				}
+				ul:nth-child(odd){
+					background-color: whitesmoke;
+				}
+			}
+			p{
+				margin-top: 4em;
+				width: 100%;
+				border-top:2px solid #808080;
+				padding-top: .4em;
+
+				font-size: .6em;
+				font-weight: bold;
+				color:#000000;
+			}
+		}
+	}
+
+
+
+	.Grid-cell.tit {
+	    flex: 0 0 16%;
+	    // background-color: pink;
+	}
+
+	.Grid-cell.ke {
+	    flex: 0 0 50%;
+	    // background-color: orange;
+	}
+
+	.Grid-cell.mess {
+	    flex: 0 0 17%;
+	    // background-color: yellow;
+	}
+	.Text-align{
+		text-align: center;
+	}
+	.Flex-Justify-center{
+		justify-content:center;
+	}
+
+/*
+	有问题！在PC端改变屏幕大小时候，list-header没有发生变化，但是list-body则发生了变化，
+	具体表现宽度变形缩小，发现出问题的都是假了flex的 还加了justify-content:center的，而未加上这两者的，则没变化
+*/
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1640px){
+	#SourceList{
+		width: 100%;
+		// 通过设置最小高度来控制Footer置底
+		min-height: 50em;
+		margin-bottom:30px;
+
+		display: flex;
+		justify-content:center;
+		.container{
+			width: 80%;
+			display: flex;
+			flex-direction:column;
+			h3{
+				font-size: 1.8em;
+				font-weight: bold;
+				color:#808080;
+			}
+			#list-header{
+				display: flex;
+				flex-direction:row;
+				li{ 
+					font-size: 1em;
+					font-weight: bold;
+
+					height: 3em;
+					line-height: 3em;
+				}
+			}
+			#list-body{
+				display: flex;
+				flex-direction:column;
+				ul{
+					display:flex;
+					flex-direction:row;
+					li{
+						display: flex;
+						align-items:center;
+						height: 3em;
+						font-size: .8em;
+						border-top: 2px #808080 solid;
+
+						// 问题！没有省略号出现，还有小问题就是边界紧贴文字
+						text-overflow:ellipsis; 
+						white-space:nowrap; 
+						overflow:hidden;
+					}
+					li:nth-child(3):hover, li:nth-child(5):hover{
+						cursor: pointer;
+						color:red;
+					}
+				}
+				ul:nth-child(odd){
+					background-color: whitesmoke;
+				}
+				ul:hover{
+					background-color: yellow;
+				}
+			}
+			p{
+				margin-top: 4em;
+				width: 100%;
+				border-top:2px solid #808080;
+				padding-top: .4em;
+
+				font-size: .6em;
+				font-weight: bold;
+				color:#000000;
+			}
+		}
+	}
+
+
+
+	.Grid-cell.tit {
+	    flex: 0 0 30%;
+	    // background-color: pink;
+	}
+	.Grid-cell.tit span{
+		min-width: 0px;
+    	text-overflow: ellipsis;
+    	overflow: hidden;
+    	white-space: nowrap;
+    	flex: 1;
+	}
+
+	.Grid-cell.ke {
+	    flex: 0 0 34%;
+	    // background-color: orange;
+	}
+
+	.Grid-cell.mess {
+	    flex: 0 0 12%;
+	    // background-color: yellow;
+	}
+	.Text-align{
+		text-align: center;
+	}
+	.Flex-Justify-center{
+		justify-content:center;
+	}
+
+/*
+	有问题！在PC端改变屏幕大小时候，list-header没有发生变化，但是list-body则发生了变化，
+	具体表现宽度变形缩小，发现出问题的都是假了flex的 还加了justify-content:center的，而未加上这两者的，则没变化
+*/
+}

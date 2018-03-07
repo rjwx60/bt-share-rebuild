@@ -1,0 +1,186 @@
+@media screen and(max-width:374px){
+#SourceList{
+	width: 100%;
+	margin:10px 0;
+
+	display: flex;
+	justify-content:center;
+	.container{
+		width: 100%;
+		display: flex;
+		flex-direction:column;
+		h3{
+			font-size: 1.8em;
+			font-weight: bold;
+			color:#808080;
+			margin-bottom: 10px;
+			padding-left: 6px;
+		}
+		#list-header{
+			display: flex;
+			flex-direction:row;
+			li{
+				font-size: .8rem;
+				font-weight: bold;
+			}
+			li:nth-child(2){
+				display: none;
+			}
+		}
+		#list-body{
+			display: flex;
+			flex-direction:column;
+			ul{
+				display:flex;
+				flex-direction:row;
+				li{
+					display: flex;
+					align-items:center;
+					height: 4em;
+					font-size: .9em;
+					border-top: 2px #808080 solid;
+
+					// 问题！没有省略号出现，还有小问题就是边界紧贴文字
+					text-overflow:ellipsis; 
+					white-space:nowrap; 
+					overflow:hidden;
+				}
+				li:nth-child(2){
+					display: none;
+				}
+			}
+			ul:nth-child(odd){
+				background-color: whitesmoke;
+			}
+		}
+		p{
+			margin-top: 4em;
+			width: 100%;
+			border-top:2px solid #808080;
+			padding-top: .4em;
+
+			font-size: .6em;
+			font-weight: bold;
+			color:#000000;
+		}
+	}
+}
+
+
+
+.Grid-cell.tit {
+    flex: 0 0 100%;
+    // background-color: pink;
+}
+
+.Grid-cell.ke {
+    flex: 0 0 0%;
+    // background-color: orange;
+}
+
+.Text-align{
+	text-align: center;
+}
+.Flex-Justify-center{
+	justify-content:center;
+}
+
+}
+
+
+@media screen and(min-width:375px) and (max-width:1224px){
+#SourceList{
+	width: 100%;
+	margin:10px 0;
+
+	display: flex;
+	justify-content:center;
+	.container{
+		width: 100%;
+		display: flex;
+		flex-direction:column;
+		h3{
+			font-size: 1.8em;
+			font-weight: bold;
+			color:#808080;
+			margin-bottom: 10px;
+			padding-left: 6px;
+		}
+		#list-header{
+			display: flex;
+			flex-direction:row;
+			li{
+				font-size: .8rem;
+				font-weight: bold;
+			}
+		}
+		#list-body{
+			display: flex;
+			flex-direction:column;
+			ul{
+				display:flex;
+				flex-direction:row;
+				li{
+					display: flex;
+					align-items:center;
+					height: 4em;
+					font-size: .9em;
+					border-top: 2px #808080 solid;
+
+					// 问题！没有省略号出现，还有小问题就是边界紧贴文字
+					text-overflow:ellipsis; 
+					white-space:nowrap; 
+					overflow:hidden;
+				}
+			}
+			ul:nth-child(odd){
+				background-color: whitesmoke;
+			}
+		}
+		p{
+			margin-top: 4em;
+			width: 100%;
+			border-top:2px solid #808080;
+			padding-top: .4em;
+
+			font-size: .6em;
+			font-weight: bold;
+			color:#000000;
+		}
+	}
+}
+
+
+
+.Grid-cell.tit {
+    flex: 0 0 55%;
+    // background-color: pink;
+}
+.Grid-cell.tit span{
+	min-width: 0px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	flex: 1;
+}
+
+.Grid-cell.ke {
+    flex: 0 0 45%;
+    // background-color: orange;
+}
+.Grid-cell.ke span{
+    min-width: 0px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	flex: 1;
+}
+
+.Text-align{
+	text-align: center;
+}
+.Flex-Justify-center{
+	justify-content:center;
+}
+
+}
